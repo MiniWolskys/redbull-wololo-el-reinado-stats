@@ -1,0 +1,27 @@
+.leaderboard {
+  margin: auto;
+  width: 80%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.leaderboard-row {
+  width: 100%;
+  display: inline-flex;
+  border-top: 1px solid black;
+}
+
+.leaderboard-header {
+  width: 100%;
+  display: inline-flex;
+  background: cadetblue;
+  color: white;
+}
+
+.leaderboard-value {
+  width: 20%;
+}
+
+.leaderboard-title {
+  width: 20%;
+}

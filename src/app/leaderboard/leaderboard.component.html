@@ -1,0 +1,22 @@
+<app-countdown [endTimestamp]="endTimestamp"></app-countdown>
+
+<div class="leaderboard">
+  <div class="leaderboard-header">
+    <div class="leaderboard-title leaderboard-rank">{{ "Rank" }}</div>
+    <div class="leaderboard-title leaderboard-highest-score">{{ "HighestScore" }}</div>
+    <div class="leaderboard-title leaderboard-name">{{ "Name" }}</div>
+    <div class="leaderboard-title leaderboard-current-score">{{ "CurrentScore" }}</div>
+    <div class="leaderboard-title leaderboard-current-rank">{{ "CurrentRank" }}</div>
+  </div>
+  <div *ngIf="!loadingLeaderboard">
+    <div *ngFor="let player of players; index as index" class="leaderboard-row">
+      <div class="leaderboard-value leaderboard-rank">{{ index + 1 }}</div>
+      <div class="leaderboard-value leaderboard-highest-score">{{ player.highest }}</div>
+      <div class="leaderboard-value leaderboard-name">{{ player.name }}</div>
+      <div class="leaderboard-value leaderboard-current-score">{{ player.current }}</div>
+      <div class="leaderboard-value leaderboard-current-rank">{{ player.currentRank }}</div>
+    </div>
+  </div>
+  <app-loader *ngIf="loadingLeaderboard">
+  </app-loader>
+</div>
